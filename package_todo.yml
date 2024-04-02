@@ -9,7 +9,6 @@
 packs/merchants:
   "::Merchant":
     violations:
-    - dependency
     - privacy
     files:
-    - app/controllers/merchants_controller.rb
+    - app/public/controllers/application_controller.rb

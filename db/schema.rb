@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_02_113928) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_02_152331) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "merchant_sites", force: :cascade do |t|
+    t.bigint "merchant_id", null: false
+    t.boolean "published", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["merchant_id"], name: "index_merchant_sites_on_merchant_id"
+  end
 
   create_table "merchants", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "merchant_sites", "merchants"
 end
