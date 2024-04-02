@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+bundle e rails new . -d postgresql --api --minimal --skip-test --skip-docker --force
 
-Things you may want to cover:
+docker run -d -p 5432:5432 --name modular_monolith_on_rails \
+-v modular_monolith_on_rails:/var/lib/postgresql/data \
+-e POSTGRES_USER=postgres \
+-e POSTGRES_PASSWORD=password \
+postgres
 
-* Ruby version
+bin/setup
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
