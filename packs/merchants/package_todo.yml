@@ -1,0 +1,27 @@
+# This file contains a list of dependencies that are not part of the long term plan for the
+# 'packs/merchants' package.
+# We should generally work to reduce this list over time.
+#
+# You can regenerate this file using the following command:
+#
+# bin/packwerk update-todo
+---
+".":
+  "::ApplicationController":
+    violations:
+    - privacy
+    files:
+    - packs/merchants/app/controllers/merchants/sites_controller.rb
+    - packs/merchants/app/controllers/merchants_controller.rb
+  "::ApplicationRecord":
+    violations:
+    - privacy
+    files:
+    - packs/merchants/app/models/merchant.rb
+    - packs/merchants/app/models/merchant_site.rb
+  "::Serializer::Base":
+    violations:
+    - privacy
+    files:
+    - packs/merchants/app/controllers/serializer/merchants/sites_show.rb
+    - packs/merchants/app/controllers/serializer/merchants_show.rb

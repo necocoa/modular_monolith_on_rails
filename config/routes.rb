@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       resource :site, only: [:show, :update]
     end
   end
+
+  resource :mypage, only: [:show]
 end

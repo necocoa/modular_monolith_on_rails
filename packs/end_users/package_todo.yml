@@ -1,20 +1,24 @@
 # This file contains a list of dependencies that are not part of the long term plan for the
-# '.' package.
+# 'packs/end_users' package.
 # We should generally work to reduce this list over time.
 #
 # You can regenerate this file using the following command:
 #
 # bin/packwerk update-todo
 ---
-packs/end_users:
-  "::EndUser":
+".":
+  "::ApplicationController":
     violations:
     - privacy
     files:
-    - app/controllers/application_controller.rb
-packs/merchants:
-  "::Merchant":
+    - packs/end_users/app/controllers/mypages_controller.rb
+  "::ApplicationRecord":
     violations:
     - privacy
     files:
-    - app/controllers/application_controller.rb
+    - packs/end_users/app/models/end_user.rb
+  "::Serializer::Base":
+    violations:
+    - privacy
+    files:
+    - packs/end_users/app/controllers/serializer/mypages_show.rb

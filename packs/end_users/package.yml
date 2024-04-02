@@ -1,5 +1,4 @@
 enforce_dependencies: true
 enforce_privacy: true
 dependencies:
-  - packs/merchants
-  - packs/end_users
+  - .
