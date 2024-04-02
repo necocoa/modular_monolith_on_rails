@@ -3,9 +3,9 @@ class MerchantsController < ApplicationController
 
   # GET /merchants
   def index
-    @merchants = Merchant.all
+    merchants = Merchant.all
 
-    render json: @merchants
+    render json: { merchants: merchants.map { { id: _1.id } } }
   end
 
   # GET /merchants/1

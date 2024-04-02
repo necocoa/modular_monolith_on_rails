@@ -12,3 +12,4 @@ end
 
 gem "packwerk"
 gem "packwerk-extensions"
+gem "packs-rails"
