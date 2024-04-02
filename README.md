@@ -13,3 +13,7 @@ bin/setup
 ```
 
 ```
+rails g scaffold User name:string
+rails g scaffold Room name:string user:references
+rails db:migrate
+```
