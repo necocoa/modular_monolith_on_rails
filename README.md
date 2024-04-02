@@ -19,6 +19,12 @@ rails db:migrate
 ```
 
 ```
-bundle add packwerk
-bundle exec packwerk init
+bundle binstub packwerk
+bin/packwerk init
 ```
+
+## Packwerk
+
+`bin/packwerk validate`
+`bin/packwerk check`
+`bin/packwerk update`
